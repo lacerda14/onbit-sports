@@ -1,0 +1,169 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+.container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoNavBar{
+  width: 180px;
+} 
+.header {
+  width: 100%;
+  min-height: 40px;
+  background-color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 8px 15px;
+}
+
+.headerBtnGroup{
+  display: flex;
+  gap: 15px;
+}
+
+.navBtn{
+  font-size: 1rem;
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.navBtn:hover{
+  border-bottom: 2px solid black;
+}
+.sectiontitle{
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+.sectiondescripition{
+  text-align: center;
+  color: #383838;
+  text-transform: uppercase;
+}
+.gridcontainer{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "mainContent sidebarContent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+.mainCardImg{
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+.sidebarCardIMG{
+  width: 100%;
+  border-radius: 10px;
+ }
+ .categoryCard{
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+ }
+ .mainContent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: mainContent;
+ }
+ .categoryCard:hover{
+  border-color: black;
+ }
+ .maincategoryCardTitle{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+ }
+ .maincategoryDescripition{
+  padding: 6px;
+  font-size: 1rem;
+ }
+ .sidebarContent{
+  background-color: #383838;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sidebarContent;
+  gap: 20px;
+ }
+ .sidebarCard{
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+
+ } 
+ .sidebarCard:hover{
+  border-color: white;
+ }
+ .sidebarCardtitle{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ .logofooter{
+  width: 180px;
+ }
+ .footer{
+  width: 100%;
+  background-color: #292929;
+  min-height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 15px;
+ }
+ .footerAnchor{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+ }
+
+ @media (max-width: 630px){
+  .gridcontainer{
+    grid-template-areas: 
+    "mainContent"
+    "sidebarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .sidebarContent{
+    min-width: auto;
+  }
+  .footerAnchor{
+    font-size: 1.2rem;
+  }
+ }
+ @media (max-width: 494px){
+  .header , .footer {
+    justify-content: center;
+  }
+ }
